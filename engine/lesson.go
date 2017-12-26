@@ -1,5 +1,5 @@
-package onboard
+package engine
 
 type lesson struct {
-	quizzes []Quiz
+	quizzes []quiz
 }

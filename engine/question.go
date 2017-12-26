@@ -1,4 +1,4 @@
-package onboard
+package engine
 
 // Question is a multiple choice question that will be used by quizzes and exams.
 type question struct {

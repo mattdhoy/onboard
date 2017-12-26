@@ -1,4 +1,5 @@
-package onboard
+package engine
 
 type quiz struct {
+	questions []question
 }

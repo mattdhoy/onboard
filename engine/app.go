@@ -1,4 +1,4 @@
-package onboard
+package engine
 
 import (
 	"github.com/codyoss/nap"
@@ -6,6 +6,6 @@ import (
 
 func main() {
 	app := nap.New()
-	app.GET("/")
+	// app.GET("/")
 	app.Serve()
 }

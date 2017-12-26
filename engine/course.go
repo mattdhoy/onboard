@@ -1,5 +1,5 @@
-package onboard
+package engine
 
 type course struct {
-	lessons []Lesson
+	lessons []lesson
 }
