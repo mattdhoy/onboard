@@ -1,5 +1,6 @@
 package engine
 
-type course struct {
-	lessons []lesson
+// Course contains a list of lessons
+type Course struct {
+	Lessons []Lesson
 }

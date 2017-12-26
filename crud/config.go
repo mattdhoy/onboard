@@ -1,29 +1,23 @@
-package engine
+package crud
 
 import (
-	"io/ioutil"
-	"log"
+	"fmt"
 
-	yaml "gopkg.in/yaml.v2"
+	"github.com/BurntSushi/toml"
 )
 
-type conf struct {
-	dbUser string
-	dbPass string
-	dbName string
+// Conf hold database configuration stuff
+type Conf struct {
+	DbUser string
+	DbPass string
+	DbName string
 }
 
-func (c *conf) getConf() *conf {
-
-	ymlFile, err := ioutil.ReadFile("conf/config.yml")
-	if err != nil {
-		log.Printf("ymlfile.Get err #%v ", err)
+//GetConf gets a conf!
+func GetConf() Conf {
+	var conf Conf
+	if _, err := toml.DecodeFile("crud/conf/config.toml", &conf); err != nil {
+		fmt.Println(err)
 	}
-
-	err = yaml.Unmarshal(ymlFile, c)
-	if err != nil {
-		log.Fatalf("Unmarshal: %v", err)
-	}
-
-	return c
+	return conf
 }

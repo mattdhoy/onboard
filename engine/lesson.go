@@ -1,5 +1,6 @@
 package engine
 
-type lesson struct {
-	quizzes []quiz
+// Lesson contains a list of quizzes
+type Lesson struct {
+	Quizzes []Quiz
 }
